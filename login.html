@@ -1,0 +1,68 @@
+<title>Login</title>
+<style>
+    /* Styles for Login Form */
+    body {
+        background-color: #f0f0f0; 
+        background-image:url(puppy1.jfif);
+        background-repeat: no-repeat;
+	background- attachment: fixed;
+	background-size:cover ;
+
+    }
+    #loginContainer {
+        width: 300px;
+        margin: 0 auto;
+        margin-top: 100px;
+        background-color: #fff; /* Container background color */
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .loginInput {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .loginButton {
+        width: calc(100%);
+        padding: 10px;
+        background-color: black;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .loginButton:hover {
+        background-color: black;
+    }
+</style>
+</head>
+<body>
+
+<div id="loginContainer">
+    <input type="text" id="username" class="loginInput" placeholder="Username">
+    <input type="password" id="password" class="loginInput" placeholder="Password">
+    <button onclick="login()" class="loginButton">Login</button>
+</div>
+
+<script>
+    function login() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+
+        if (username === "user" && password === "jayvie") {
+            window.location.href = "home.htm";
+        } else {
+            alert("Invalid username or password!");
+        }
+    }
+</script>
+
+
+
+</body>
+</html>
+
